@@ -1,4 +1,4 @@
-%define _buildnumber gc7987a8
+%define _buildnumber c7987a8
 %define _revision 7
 %define _name Greybird
 
@@ -9,7 +9,7 @@ Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPL-2.0+ or CC-BY-SA-3.0
 URL:		http://shimmerproject.org/project/greybird/
-Source:		shimmerproject-%{_name}-v%{version}-%{_revision}-%{_buildnumber}.tar.gz
+Source:		shimmerproject-%{_name}-v%{version}-%{_revision}-g%{_buildnumber}.tar.gz
 BuildArch:	noarch
 
 %description
