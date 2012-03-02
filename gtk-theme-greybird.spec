@@ -5,11 +5,11 @@
 Summary:	A Clean Minimalistic Theme for GNOME, XFCE, GTK+ 2 and 3
 Name:		gtk-theme-greybird
 Version:	0.4
-Release:	1
+Release:	2
 Group:		Graphical desktop/GNOME
 License:	GPL-2.0+ or CC-BY-SA-3.0
 URL:		http://shimmerproject.org/project/greybird/
-Source:		shimmerproject-%{_name}-v%{version}-%{_revision}-g%{_buildnumber}.tar.gz
+Source0:	shimmerproject-%{_name}-v%{version}-%{_revision}-g%{_buildnumber}.tar.gz
 BuildArch:	noarch
 
 %description
@@ -39,7 +39,7 @@ This package provides the GTK+ 2 support of Greybird.
 %package -n gtk3-theme-greybird
 Summary:	A Clean Minimalistic Theme for GNOME, XFCE, GTK+ 2 and 3 -- GTK+ 3 Support
 Requires:	%{name}-common = %{version}
-Requires:	gtk-engine-unico
+Requires:	gtk-unico-engine
 
 %description -n gtk3-theme-greybird
 This package provides the GTK+ 3 support of Greybird.
