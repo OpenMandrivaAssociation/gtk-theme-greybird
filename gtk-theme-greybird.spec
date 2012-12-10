@@ -71,3 +71,17 @@ cp -a backdrops gtk-2.0 metacity-1 xfce-notify-4.0 xfwm4 xfwm4_compact \
 %files -n gtk3-theme-greybird
 %{_datadir}/themes/%{_name}/gtk-3.0
 
+
+
+%changelog
+* Fri Mar 02 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.4-2
++ Revision: 781867
+- rebuild, fixed requires for unico-engine name
+
+* Fri Mar 02 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.4-1
++ Revision: 781824
+- new version v0.4-7-gc7987a8
+- cleaned up spec
+- renamed pkg to mdv std
+- imported package greybird-theme
+
