@@ -5,7 +5,7 @@
 Summary:	A Clean Minimalistic Theme for GNOME, XFCE, GTK+ 2 and 3
 Name:		gtk-theme-greybird
 Version:	0.4
-Release:	2
+Release:	3
 Group:		Graphical desktop/GNOME
 License:	GPL-2.0+ or CC-BY-SA-3.0
 URL:		http://shimmerproject.org/project/greybird/
