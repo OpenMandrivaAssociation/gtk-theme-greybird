@@ -1,16 +1,22 @@
 %define _buildnumber c7987a8
 %define _revision 7
-%define _name Greybird
+%define oname Greybird
 
 Summary:	A Clean Minimalistic Theme for GNOME, XFCE, GTK+ 2 and 3
 Name:		gtk-theme-greybird
-Version:	0.4
-Release:	3
+Version:	3.23.2
+Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPL-2.0+ or CC-BY-SA-3.0
 URL:		http://shimmerproject.org/project/greybird/
-Source0:	shimmerproject-%{_name}-v%{version}-%{_revision}-g%{_buildnumber}.tar.gz
+Source0:	https://github.com/shimmerproject/Greybird/archive/refs/tags/v%{version}/Greybird-%{version}.tar.gz
 BuildArch:	noarch
+
+BuildRequires:  meson
+BuildRequires:  sassc
+BuildRequires:  glib2.0-common
+BuildRequires:  pkgconfig(gdk-pixbuf-2.0)
+BuildRequires:  librsvg2
 
 %description
 This theme for GTK2/3 and xfwm4/emerald/metacity started out on the basis of
@@ -45,15 +51,14 @@ Requires:	gtk-unico-engine
 This package provides the GTK+ 3 support of Greybird.
 
 %prep
-%setup -qn shimmerproject-%{_name}-%{_buildnumber}
+%autosetup -n %{oname}-%{version} -p1
 
 %build
+%meson
+%meson_install
 
 %install
-mkdir -p %{buildroot}%{_datadir}/themes/%{_name}
-cp -a gtk-3.0 %{buildroot}%{_datadir}/themes/%{_name}
-cp -a backdrops gtk-2.0 metacity-1 xfce-notify-4.0 xfwm4 xfwm4_compact \
-	Greybird.emerald %{buildroot}%{_datadir}/themes/%{_name}
+%meson_build
 
 %files common
 %doc README LICENSE.CC LICENSE.GPL
