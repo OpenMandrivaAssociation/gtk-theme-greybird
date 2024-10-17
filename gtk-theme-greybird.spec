@@ -8,7 +8,7 @@ Version:	0.4
 Release:	3
 Group:		Graphical desktop/GNOME
 License:	GPL-2.0+ or CC-BY-SA-3.0
-URL:		http://shimmerproject.org/project/greybird/
+URL:		https://shimmerproject.org/project/greybird/
 Source0:	shimmerproject-%{_name}-v%{version}-%{_revision}-g%{_buildnumber}.tar.gz
 BuildArch:	noarch
 
